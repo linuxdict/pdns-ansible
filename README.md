@@ -79,7 +79,7 @@ Run as a master using the bind backend (when you already have a named.conf):
 ```
 - hosts: ns1.example.net
   roles:
-    - role: PowerDNS.pdns
+    - role: pdns-ansible
   vars:
     pdns_config:
       master: true
@@ -94,7 +94,7 @@ with the MySQL backend:
 ```
 - hosts: ns2.example.net
   roles:
-    - role: PowerDNS.pdns
+    - role: pdns-ansible
   vars:
     pdns_config:
       master: false
@@ -116,7 +116,7 @@ with the MySQL backend and use the root user to initialize the database and data
 ```
 - hosts: ns2.example.net
   roles:
-    - role: PowerDNS.pdns
+    - role: pdns-ansible
   vars:
     pdns_config:
       master: true
@@ -145,7 +145,7 @@ Run as a master on port 5300, using two different PostgreSQL databases:
 ```
 - hosts: ns2.example.net
   roles:
-    - role: PowerDNS.pdns
+    - role: pdns-ansible
   vars:
     pdns_config:
       master: true
@@ -168,7 +168,7 @@ Run with a single gsqlite3 backend and have the role create this database:
 ```
 - hosts: ns4.example.net
   roles:
-    - role: PowerDNS.pdns
+    - role: pdns-ansible
   vars:
     database_name: '/var/lib/powerdns/db.sqlite'
     pdns_config:
